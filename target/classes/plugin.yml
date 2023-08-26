@@ -1,0 +1,7 @@
+name: PattyEssentialsV2
+version: '1.0'
+main: org.patriciachips.pattyessentialsv2.PattyEssentialsV2
+api-version: '1.20'
+commands:
+  test:
+    description: test
