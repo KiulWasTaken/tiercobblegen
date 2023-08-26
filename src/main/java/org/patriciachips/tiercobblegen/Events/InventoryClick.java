@@ -31,40 +31,46 @@ public class InventoryClick implements Listener {
                         ShopInventorys.MainInventory(p);
                         break;
                     default:
-                        p.sendMessage("check");
                         for (ShopItems shopItems : ShopItems.values()) {
-                            switch (shopItems.getItemInventory()) {
-                                case "main": /** Inventory Item */
-                                    switch (shopItems.name()) {
-                                        case "catagory_farming":
-                                            ShopInventorys.shopInventory(p, "farming");
-                                            break;
-                                        case "catagory_foraging":
-                                            ShopInventorys.shopInventory(p, "foraging");
-                                            break;
-                                        case "catagory_mining":
-                                            ShopInventorys.shopInventory(p, "mining");
-                                            break;
-                                        case "catagory_mobdrops":
-                                            ShopInventorys.shopInventory(p, "mobdrops");
-                                            break;
-                                        case "catagory_fishing":
-                                            ShopInventorys.shopInventory(p, "fishing");
-                                            break;
-                                        case "catagory_redstone":
-                                            break;
-                                    }
-                                    break;
-                                default:
-                                    Integer itemAmount = 0;
-                                    for (ItemStack itemStack : p.getInventory().getContents()) {
-                                        if (itemStack != null && itemStack.getType() == e.getCurrentItem().getType()) {
-                                            itemAmount = itemAmount + itemStack.getAmount();
+                            if (e.getCurrentItem().getType() == shopItems.getMaterial()) {
+                                switch (shopItems.getItemInventory()) {
+                                    case "main": /** Inventory Item */
+                                        switch (shopItems.name()) {
+                                            case "catagory_farming":
+                                                ShopInventorys.shopInventory(p, "farming");
+                                                break;
+                                            case "catagory_foraging":
+                                                ShopInventorys.shopInventory(p, "foraging");
+                                                break;
+                                            case "catagory_mining":
+                                                ShopInventorys.shopInventory(p, "mining");
+                                                break;
+                                            case "catagory_mobdrops":
+                                                ShopInventorys.shopInventory(p, "mobdrops");
+                                                break;
+                                            case "catagory_fishing":
+                                                ShopInventorys.shopInventory(p, "fishing");
+                                                break;
+                                            case "catagory_redstone":
+                                                break;
                                         }
-                                    }
-                                    p.sendMessage(itemAmount + "");
+                                        break;
+                                    default:
+                                        Integer itemAmount = 0;
+                                        for (ItemStack itemStack : p.getInventory().getContents()) {
+                                            if (itemStack != null && itemStack.getType() == e.getCurrentItem().getType()) {
+                                                itemAmount = itemAmount + itemStack.getAmount();
+                                            }
+                                        }
+                                        p.sendMessage(itemAmount + " " + shopItems.getBuyPrice() * itemAmount);
+                                }
+                                if (p.hasPermission("e")) {
+
+                                } else {
+
+                                }
+                                break;
                             }
-                            break;
                         }
                 }
             }

@@ -14,7 +14,7 @@ public enum ShopItems {
     farming_beetroot("", Material.BEETROOT, new String[]{""}, 0.0, 0.0, "farming"),
     farming_carrot("", Material.CARROT, new String[]{""}, 0.0, 0.0, "farming"),
     farming_potato("", Material.POTATO, new String[]{""}, 0.0, 0.0, "farming"),
-    farming_sugarcane("", Material.SUGAR_CANE, new String[]{""}, 0.0, 0.0, "farming"),
+    farming_sugarcane("", Material.SUGAR_CANE, new String[]{""}, 1.0, 0.0, "farming"),
     farming_melon("", Material.MELON, new String[]{""}, 0.0, 0.0, "farming"),
     farming_pumpkin("", Material.PUMPKIN, new String[]{""}, 0.0, 0.0, "farming"),
     farming_netherwart("", Material.NETHER_WART, new String[]{""}, 0.0, 0.0, "farming"),
