@@ -6,7 +6,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.patriciachips.tiercobblegen.Commands.Shop;
-import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
+import org.patriciachips.tiercobblegen.CustomConfigs.BalanceConfig;
 import org.patriciachips.tiercobblegen.Events.InventoryClick;
 import org.patriciachips.tiercobblegen.Events.BlockForm;
 
@@ -26,11 +26,11 @@ public final class tiercobblegen extends JavaPlugin {
 
         /** Logic */
 
-        registerGlow();
+        BalanceConfig.setup();
+        BalanceConfig.get().options().copyDefaults(true);
+        BalanceConfig.save();
 
-        for (Player players : Bukkit.getOnlinePlayers()) {
-            PlayerDataConfig.setup(players);
-        }
+        registerGlow();
 
     }
 

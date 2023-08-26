@@ -1,4 +1,4 @@
-name: Tiercobblegen
+name: tiercobblegen
 version: '${project.version}'
 main: org.patriciachips.tiercobblegen.tiercobblegen
 api-version: '1.20'

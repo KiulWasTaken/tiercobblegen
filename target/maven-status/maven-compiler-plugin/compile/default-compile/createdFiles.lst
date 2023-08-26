@@ -2,12 +2,12 @@ org\patriciachips\tiercobblegen\GlintEnchantment.class
 org\patriciachips\tiercobblegen\Methods\ItemStackMethod.class
 org\patriciachips\tiercobblegen\InnerConfig.class
 org\patriciachips\tiercobblegen\Events\BlockForm$1.class
+org\patriciachips\tiercobblegen\Events\Join.class
 org\patriciachips\tiercobblegen\tiercobblegen.class
-org\patriciachips\tiercobblegen\CustomConfigs\PlayerDataConfig.class
 org\patriciachips\tiercobblegen\Methods\ColoredText.class
 org\patriciachips\tiercobblegen\ShopItems.class
-org\patriciachips\tiercobblegen\CustomConfigs\TeamsConfig.class
 org\patriciachips\tiercobblegen\Commands\Shop.class
 org\patriciachips\tiercobblegen\Events\InventoryClick.class
+org\patriciachips\tiercobblegen\CustomConfigs\BalanceConfig.class
 org\patriciachips\tiercobblegen\Events\BlockForm.class
 org\patriciachips\tiercobblegen\Inventorys\ShopInventorys.class
