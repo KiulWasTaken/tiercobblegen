@@ -1,7 +1,10 @@
-name: PattyEssentialsV2
+name: Tiercobblegen
 version: '1.0'
-main: org.patriciachips.pattyessentialsv2.PattyEssentialsV2
+main: org.patriciachips.tiercobblegen.tiercobblegen
 api-version: '1.20'
 commands:
-  test:
-    description: test
+  shop:
+
+permissions:
+
+

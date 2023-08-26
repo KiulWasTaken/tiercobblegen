@@ -5,6 +5,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.patriciachips.tiercobblegen.Commands.Shop;
 import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
 import org.patriciachips.tiercobblegen.Events.InventoryClick;
 import org.patriciachips.tiercobblegen.Events.BlockForm;
@@ -17,7 +18,7 @@ public final class tiercobblegen extends JavaPlugin {
     public void onEnable() {
 
         /** Commands */
-        //getCommand("test").setExecutor(new test());
+        getCommand("shop").setExecutor(new Shop());
 
         /** Events */
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);

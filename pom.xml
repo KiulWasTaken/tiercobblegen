@@ -9,7 +9,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>PattyEssentialsV2</name>
+    <name>tiercobblegen</name>
 
     <properties>
         <java.version>1.8</java.version>
