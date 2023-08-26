@@ -23,7 +23,6 @@ public final class tiercobblegen extends JavaPlugin {
         /** Events */
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new BlockForm(), this);
-
         /** Logic */
 
         BalanceConfig.setup();
