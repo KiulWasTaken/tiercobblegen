@@ -30,9 +30,9 @@ public class BlockForm implements Listener {
                 if (p != null) {
                     //int tier = getGenTier(p);
 
-                    Material chancedMaterial = getChancedMaterial(CobbleGens.gen1, formedBlock.getType());
+                    //Material chancedMaterial = getChancedMaterial(, formedBlock.getType());
 
-                    formedBlock.setType(chancedMaterial);
+                    //formedBlock.setType(chancedMaterial);
 
                 }
             } else if (e.getBlock().getType() == Material.BASALT) {

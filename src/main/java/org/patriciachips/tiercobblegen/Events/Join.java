@@ -1,14 +1,10 @@
 package org.patriciachips.tiercobblegen.Events;
 
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockFormEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.patriciachips.tiercobblegen.CustomConfigs.BalanceConfig;
-import org.patriciachips.tiercobblegen.tiercobblegen;
+import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
 
 public class Join implements Listener {
 
@@ -17,7 +13,10 @@ public class Join implements Listener {
 
         Player p = e.getPlayer();
 
-        BalanceConfig.get().addDefault(p.getUniqueId().toString(), 0);
+        PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".bal", 0.0);
+        PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".activegen", "gen1");
+
+        PlayerDataConfig.save();
 
     }
 

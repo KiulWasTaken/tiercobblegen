@@ -1,14 +1,15 @@
 package org.patriciachips.tiercobblegen;
 
-import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.patriciachips.tiercobblegen.Commands.Bal;
+import org.patriciachips.tiercobblegen.Commands.Gen;
 import org.patriciachips.tiercobblegen.Commands.Shop;
-import org.patriciachips.tiercobblegen.CustomConfigs.BalanceConfig;
+import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
 import org.patriciachips.tiercobblegen.Events.InventoryClick;
 import org.patriciachips.tiercobblegen.Events.BlockForm;
+import org.patriciachips.tiercobblegen.Events.Join;
 
 import java.lang.reflect.Field;
 
@@ -19,15 +20,19 @@ public final class tiercobblegen extends JavaPlugin {
 
         /** Commands */
         getCommand("shop").setExecutor(new Shop());
+        getCommand("bal").setExecutor(new Bal());
+        getCommand("gen").setExecutor(new Gen());
 
         /** Events */
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new BlockForm(), this);
+        getServer().getPluginManager().registerEvents(new Join(), this);
+
         /** Logic */
 
-        BalanceConfig.setup();
-        BalanceConfig.get().options().copyDefaults(true);
-        BalanceConfig.save();
+        PlayerDataConfig.setup();
+        PlayerDataConfig.get().options().copyDefaults(true);
+        PlayerDataConfig.save();
 
         registerGlow();
 

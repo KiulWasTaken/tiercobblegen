@@ -1,7 +1,9 @@
 package org.patriciachips.tiercobblegen.Methods;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.patriciachips.tiercobblegen.GlintEnchantment;
@@ -35,4 +37,36 @@ public class ItemStackMethod {
 
     }
 
+    public static Integer getIntWithinName(String displayName) {
+        String itemName = ChatColor.stripColor(displayName);
+        int nameLength = itemName.length();
+        String containedNumber = "";
+        for (int i = 0; i < nameLength; i++) {
+            Character character = itemName.charAt(i);
+            if (Character.isDigit(character)) {
+                containedNumber += character;
+            }
+        }
+
+        return Integer.parseInt(containedNumber);
+
+    }
+
+    public static Integer getItemInvSpace(Player p, Material checkItemType) {
+
+        int itemFreespace = 0;
+
+        for (ItemStack itemStack : p.getInventory().getStorageContents()) {
+            if (itemStack == null) {
+                itemFreespace = itemFreespace + 64;
+            } else {
+                if (itemStack.getType() == checkItemType) {
+                    if (!itemStack.hasItemMeta() || itemStack.hasItemMeta() && !itemStack.getItemMeta().hasDisplayName()) {
+                        itemFreespace = itemFreespace + (64 - itemStack.getAmount());
+                    }
+                }
+            }
+        }
+        return itemFreespace;
+    }
 }

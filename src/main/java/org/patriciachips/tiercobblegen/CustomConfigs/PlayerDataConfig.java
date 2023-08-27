@@ -7,13 +7,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class BalanceConfig {
+public class PlayerDataConfig {
 
         private static File file;
         private static FileConfiguration configFile;
 
         public static void setup() {
-            file = new File(Bukkit.getServer().getPluginManager().getPlugin("tiercobblegen").getDataFolder(), "playerbalance.yml");
+            file = new File(Bukkit.getServer().getPluginManager().getPlugin("tiercobblegen").getDataFolder(), "playerdata.yml");
 
             if (!file.exists()) {
                 try {

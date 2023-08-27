@@ -4,7 +4,34 @@ main: org.patriciachips.tiercobblegen.tiercobblegen
 api-version: '1.20'
 commands:
   shop:
+    aliases:
+      - store
+  bal:
+    aliases:
+      - balance
+  gen:
+    aliases:
+      - generator
 
 permissions:
+  tiercobblegen.gen0:
+    default: not op
+  tiercobblegen.gen1:
+    default: not op
+  tiercobblegen.gen2:
+    default: op
+  tiercobblegen.gen3:
+    default: op
+  tiercobblegen.gen4:
+    default: op
+  tiercobblegen.gen5:
+    default: op
+  tiercobblegen.nethergen1:
+    default: op
+  tiercobblegen.nethergen2:
+    default: op
+  tiercobblegen.nethergen3:
+    default: op
+
 
 

@@ -1,8 +1,8 @@
-package org.patriciachips.tiercobblegen;
+package org.patriciachips.tiercobblegen.zEnums;
 
 import org.bukkit.Material;
 
-public enum ShopItems {
+public enum ShopGUIItems {
     catagory_farming("&#5eabbc&lF&#69bfd2&la&#75d4e9&lr&#80e8ff&lm&#75d4e9&li&#69bfd2&ln&#5eabbc&lg", Material.HAY_BLOCK, new String[]{""}, 0.0, 0.0, "main"),
     catagory_foraging("&#5eabbc&lF&#68bccf&lo&#71cee2&lr&#7bdff5&la&#7bdff5&lg&#71cee2&li&#68bccf&ln&#5eabbc&lg", Material.OAK_LOG, new String[]{""}, 0.0, 0.0, "main"),
     catagory_mining("&#5eabbc&lM&#6cc3d7&li&#79dcf2&ln&#79dcf2&li&#6cc3d7&ln&#5eabbc&lg", Material.DIAMOND, new String[]{""}, 0.0, 0.0, "main"),
@@ -14,11 +14,12 @@ public enum ShopItems {
     farming_beetroot("", Material.BEETROOT, new String[]{""}, 0.0, 0.0, "farming"),
     farming_carrot("", Material.CARROT, new String[]{""}, 0.0, 0.0, "farming"),
     farming_potato("", Material.POTATO, new String[]{""}, 0.0, 0.0, "farming"),
-    farming_sugarcane("", Material.SUGAR_CANE, new String[]{""}, 1.0, 0.0, "farming"),
+    farming_sugarcane("", Material.SUGAR_CANE, new String[]{""}, 1.0, 0.01, "farming"),
     farming_melon("", Material.MELON, new String[]{""}, 0.0, 0.0, "farming"),
     farming_pumpkin("", Material.PUMPKIN, new String[]{""}, 0.0, 0.0, "farming"),
     farming_netherwart("", Material.NETHER_WART, new String[]{""}, 0.0, 0.0, "farming"),
     farming_chorusfruit("", Material.CHORUS_FRUIT, new String[]{""}, 0.0, 0.0, "farming"),
+    farming_chorusflower("", Material.CHORUS_FLOWER, new String[]{""}, 0.0, 0.0, "farming"),
     /** Foraging */
     foraging_oaklog("", Material.OAK_LOG, new String[]{""}, 0.0, 0.0, "foraging"),
     foraging_birchlog("", Material.BIRCH_LOG, new String[]{""}, 0.0, 0.0, "foraging"),
@@ -28,6 +29,14 @@ public enum ShopItems {
     foraging_junglelog("", Material.JUNGLE_LOG, new String[]{""}, 0.0, 0.0, "foraging"),
     foraging_crimsonlog("", Material.CRIMSON_HYPHAE, new String[]{""}, 0.0, 0.0, "foraging"),
     foraging_warpedlog("", Material.WARPED_HYPHAE, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_oaksapling("", Material.OAK_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_birchsapling("", Material.BIRCH_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_acaciasapling("", Material.ACACIA_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_darkoaksapling("", Material.DARK_OAK_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_sprucesapling("", Material.SPRUCE_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_junglesapling("", Material.JUNGLE_SAPLING, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_crimsonfungus("", Material.CRIMSON_FUNGUS, new String[]{""}, 0.0, 0.0, "foraging"),
+    foraging_warpedfungus("", Material.WARPED_FUNGUS, new String[]{""}, 0.0, 0.0, "foraging"),
     /** Mining */
     mining_coal("", Material.COAL, new String[]{""}, 0.0, 0.0, "mining"),
     mining_iron("", Material.IRON_INGOT, new String[]{""}, 0.0, 0.0, "mining"),
@@ -37,6 +46,8 @@ public enum ShopItems {
     mining_emerald("", Material.EMERALD, new String[]{""}, 0.0, 0.0, "mining"),
     mining_obsidian("", Material.OBSIDIAN, new String[]{""}, 0.0, 0.0, "mining"),
     mining_ancientdebris("", Material.ANCIENT_DEBRIS, new String[]{""}, 0.0, 0.0, "mining"),
+    mining_waterbucket("", Material.WATER_BUCKET, new String[]{""}, 0.0, 0.0, "mining"),
+    mining_lavabucket("", Material.LAVA_BUCKET, new String[]{""}, 0.0, 0.0, "mining"),
     /** Mob Drops */
     mobdrops_rottenflesh("", Material.ROTTEN_FLESH, new String[]{""}, 0.0, 0.0, "mobdrops"),
     mobdrops_gunpowder("", Material.GUNPOWDER, new String[]{""}, 0.0, 0.0, "mobdrops"),
@@ -60,7 +71,7 @@ public enum ShopItems {
     private Double sellPrice;
     private String inventory;
 
-    ShopItems(String displayName, Material material, String[] lore, Double buyPrice, Double sellPrice, String inventory) {
+    ShopGUIItems(String displayName, Material material, String[] lore, Double buyPrice, Double sellPrice, String inventory) {
         this.displayName = displayName;
         this.material = material;
         this.lore = lore;
