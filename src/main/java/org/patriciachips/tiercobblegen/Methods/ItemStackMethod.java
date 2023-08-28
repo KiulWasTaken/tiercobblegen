@@ -58,11 +58,11 @@ public class ItemStackMethod {
 
         for (ItemStack itemStack : p.getInventory().getStorageContents()) {
             if (itemStack == null) {
-                itemFreespace = itemFreespace + 64;
+                itemFreespace = itemFreespace + checkItemType.getMaxStackSize();
             } else {
                 if (itemStack.getType() == checkItemType) {
                     if (!itemStack.hasItemMeta() || itemStack.hasItemMeta() && !itemStack.getItemMeta().hasDisplayName()) {
-                        itemFreespace = itemFreespace + (64 - itemStack.getAmount());
+                        itemFreespace = itemFreespace + (checkItemType.getMaxStackSize() - itemStack.getAmount());
                     }
                 }
             }

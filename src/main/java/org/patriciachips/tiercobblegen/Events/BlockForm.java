@@ -12,8 +12,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.patriciachips.tiercobblegen.CobbleGens;
+import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
 import org.patriciachips.tiercobblegen.InnerConfig;
 import org.patriciachips.tiercobblegen.tiercobblegen;
+import org.patriciachips.tiercobblegen.zEnums.CobbleGUIItems;
 
 import java.util.*;
 
@@ -28,14 +30,27 @@ public class BlockForm implements Listener {
             if (formedBlock.getType() == Material.STONE || formedBlock.getType() == Material.COBBLESTONE) {
                 Player p = getGenUser(formedBlock.getLocation());
                 if (p != null) {
-                    //int tier = getGenTier(p);
+                    CobbleGUIItems generator = getGenTier(p, "activenormalgen");
 
-                    //Material chancedMaterial = getChancedMaterial(, formedBlock.getType());
+                    if (generator != null) {
+                        Material chancedMaterial = getChancedMaterial(generator.getGenerator(), formedBlock.getType());
 
-                    //formedBlock.setType(chancedMaterial);
+                        formedBlock.setType(chancedMaterial);
+                    }
 
                 }
-            } else if (e.getBlock().getType() == Material.BASALT) {
+            } else if (formedBlock.getType() == Material.BASALT) {
+                Player p = getGenUser(formedBlock.getLocation());
+                if (p != null) {
+                    CobbleGUIItems generator = getGenTier(p, "activenethergen");
+
+                    if (generator != null) {
+                        Material chancedMaterial = getChancedMaterial(generator.getGenerator(), formedBlock.getType());
+
+                        formedBlock.setType(chancedMaterial);
+                    }
+
+                }
 
             }
         }
@@ -45,21 +60,19 @@ public class BlockForm implements Listener {
     public Material getChancedMaterial(HashMap<Material, Double> generatorMaterials, Material defaultMaterial) {
 
         List<Material> generatorMaterialsKeys = new ArrayList<>(generatorMaterials.keySet());
-        Collections.shuffle(generatorMaterialsKeys);
-
-        Material chancedMaterial = defaultMaterial;
-
-        Random random = new Random();
-        Double randomDouble = random.nextInt(100) + (double) random.nextInt(101) / 100;
+        List<Material> randomMaterialList = new ArrayList<>();
 
         for (Material materials : generatorMaterialsKeys) {
-            Double chance = generatorMaterials.get(materials) * generatorMaterialsKeys.size();
-            if (randomDouble <= chance) {
-                chancedMaterial = materials;
-                break;
+            Double chance = generatorMaterials.get(materials) * 10;
+            for (int i = 0; i < chance; i++) {
+                randomMaterialList.add(materials);
             }
         }
-        return chancedMaterial;
+        while (randomMaterialList.size() < 1000) {
+            randomMaterialList.add(defaultMaterial);
+        }
+        Collections.shuffle(randomMaterialList);
+        return randomMaterialList.get(0);
     }
 
     public Player getGenUser(Location loc) {
@@ -72,12 +85,16 @@ public class BlockForm implements Listener {
         return null;
     }
 
-    public int getGenTier(Player p) {
-        for (int i = 0; i < 9; i++) {
-            if (p.hasPermission("cobblegen." + i)) {
-                return i;
+    public CobbleGUIItems getGenTier(Player p, String gentype) {
+        if (!PlayerDataConfig.get().getString(p.getUniqueId().toString() + "." + gentype).equalsIgnoreCase("null")) {
+            for (CobbleGUIItems generators : CobbleGUIItems.values()) {
+                if (PlayerDataConfig.get().getString(p.getUniqueId().toString() + "." + gentype).equalsIgnoreCase(generators.name())) {
+                    return generators;
+                }
             }
+        } else {
+            return null;
         }
-        return 0;
+        return null;
     }
 }
