@@ -37,4 +37,16 @@ public class InnerConfig {
 
     public static String insufficientFunds = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot afford this many items!");
 
+    public static String dontOwnGenerator = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You haven't unlocked this generator yet!");
+
+    public static String generatorTier = ColoredText.t("&#9afbafG&#9ffba8e&#a4fba1n&#a9fb9ae&#aefb92r&#b3fb8ba&#b8fb84t&#b3fb8bo&#aefb92r &#a9fb9at&#a4fba1i&#9ffba8e&#9afbafr &7» &6");
+
+    public static String netherGeneratorTier = ColoredText.t("&#af5717N&#b86718e&#c17719t&#ca881ah&#d3981be&#dba81cr &#e4b81dg&#edc91ee&#f6d91fn&#ffe920e&#f6d91fr&#edc91ea&#e4b81dt&#dba81co&#d3981br &#ca881at&#c17719i&#b86718e&#af5717r &7» &6");
+
+    public static String generatorEnabled = ColoredText.t("&dGenerator status &7» &#20af14&lE&#23c216&ln&#27d418&la&#2ae71a&lb&#27d418&ll&#23c216&le&#20af14&ld");
+
+    public static String generatorDisabled = ColoredText.t("&dGenerator status &7» &#af1212&lD&#c61414&li&#dd1717&ls&#f41919&la&#f41919&lb&#dd1717&ll&#c61414&le&#af1212&ld");
+
+    public static String generatorNotOwned = ColoredText.t("&cYou haven't unlocked this generator!");
+
 }

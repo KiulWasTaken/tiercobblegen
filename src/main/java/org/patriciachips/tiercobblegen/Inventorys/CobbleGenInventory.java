@@ -5,29 +5,28 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.SkullMeta;
-import org.patriciachips.tiercobblegen.Commands.Bal;
+import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
 import org.patriciachips.tiercobblegen.InnerConfig;
 import org.patriciachips.tiercobblegen.Methods.ColoredText;
 import org.patriciachips.tiercobblegen.Methods.ItemStackMethod;
 import org.patriciachips.tiercobblegen.zEnums.CobbleGUIItems;
-import org.patriciachips.tiercobblegen.zEnums.ShopGUIItems;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CobbleGenInventorys {
+public class CobbleGenInventory {
 
     public static void cobbleGenInventory(Player p) {
 
         p.playSound(p.getLocation(), Sound.BLOCK_STONE_PLACE, 0.1F, 1F);
 
-        Inventory inventory = Bukkit.createInventory(p, 45, ColoredText.t(InnerConfig.cobbleGenInventoryNameString));
+        Inventory inventory = Bukkit.createInventory(p, 54, ColoredText.t(InnerConfig.cobbleGenInventoryNameString));
 
         List<Material> pane = new ArrayList<>();
+        pane.add(Material.GRAY_STAINED_GLASS_PANE);
+        pane.add(Material.GRAY_STAINED_GLASS_PANE);
+        pane.add(Material.GRAY_STAINED_GLASS_PANE);
         pane.add(Material.GRAY_STAINED_GLASS_PANE);
         pane.add(Material.GRAY_STAINED_GLASS_PANE);
         pane.add(Material.GRAY_STAINED_GLASS_PANE);
@@ -58,16 +57,8 @@ public class CobbleGenInventorys {
             inventory.setItem(slot, ItemStackMethod.createItemStack(" ", glassPane, 1, Arrays.asList(""), false, false));
             slot++;
 
-            if (slot == 4) {
-                slot++;
-            }
-
-            if (slot == 10) {
+            if (slot == 10 || slot == 19 || slot == 28 || slot == 37) {
                 slot = slot + 7;
-            }
-
-            if (slot == 20) {
-                slot = slot + 5;
             }
         }
 
@@ -82,13 +73,44 @@ public class CobbleGenInventorys {
                 isGlowing = true;
             }
 
-            inventory.setItem(i, ItemStackMethod.createItemStack(item.getDisplayName(), item.getMaterial(), 1, Arrays.asList(item.getlore()), true, isGlowing));
+            if (item.getGenerator() != null) {
+                if (p.hasPermission("tiercobblegen." + item.name())) {
+                    if (item.isNether() == false) {
+                        if (PlayerDataConfig.get().getString(p.getUniqueId().toString() + ".activenormalgen").equalsIgnoreCase(item.name())) {
+                            isGlowing = true;
+                            lore.add(InnerConfig.generatorEnabled);
+                        } else {
+                            lore.add(InnerConfig.generatorDisabled);
+                        }
+                    } else if (item.isNether() == true) {
+                        if (PlayerDataConfig.get().getString(p.getUniqueId().toString() + ".activenethergen").equalsIgnoreCase(item.name())) {
+                            isGlowing = true;
+                            lore.add(InnerConfig.generatorEnabled);
+                        } else {
+                            lore.add(InnerConfig.generatorDisabled);
+                        }
+                    }
+                } else {
+                    lore.add(InnerConfig.generatorNotOwned);
+                }
+
+                lore.addAll(CobbleGUIItems.convertHashmapToStringList(item.getGenerator()));
+            }
+
+            inventory.setItem(i, ItemStackMethod.createItemStack(item.getDisplayName(), item.getMaterial(), 1, lore, true, isGlowing));
+
             i++;
             if (i == 5) {
                 i = i + 5;
             }
             if (i == 17) {
-                i = i + 3;
+                i = i + 4;
+            }
+            if (i == 24) {
+                i = i + 13;
+            }
+            if (i == 40) {
+                i++;
             }
         }
 

@@ -7,11 +7,14 @@ org\patriciachips\tiercobblegen\Events\Join.class
 org\patriciachips\tiercobblegen\Methods\ShopMethods.class
 org\patriciachips\tiercobblegen\Events\InventoryClick$1.class
 org\patriciachips\tiercobblegen\tiercobblegen.class
+org\patriciachips\tiercobblegen\Commands\ChestSellAll.class
 org\patriciachips\tiercobblegen\CustomConfigs\PlayerDataConfig.class
-org\patriciachips\tiercobblegen\Inventorys\CobbleGenInventorys.class
+org\patriciachips\tiercobblegen\Commands\Eco.class
 org\patriciachips\tiercobblegen\Methods\ColoredText.class
 org\patriciachips\tiercobblegen\Commands\Bal.class
+org\patriciachips\tiercobblegen\Inventorys\CobbleGenInventory.class
 org\patriciachips\tiercobblegen\CobbleGens.class
+org\patriciachips\tiercobblegen\Commands\Baltop.class
 org\patriciachips\tiercobblegen\Commands\Shop.class
 org\patriciachips\tiercobblegen\Events\InventoryClick.class
 org\patriciachips\tiercobblegen\Commands\Gen.class

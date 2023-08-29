@@ -4,6 +4,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.patriciachips.tiercobblegen.Commands.Bal;
+import org.patriciachips.tiercobblegen.Commands.ChestSellAll;
 import org.patriciachips.tiercobblegen.Commands.Gen;
 import org.patriciachips.tiercobblegen.Commands.Shop;
 import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
@@ -22,6 +23,7 @@ public final class tiercobblegen extends JavaPlugin {
         getCommand("shop").setExecutor(new Shop());
         getCommand("bal").setExecutor(new Bal());
         getCommand("gen").setExecutor(new Gen());
+        getCommand("chestsellall").setExecutor(new ChestSellAll());
 
         /** Events */
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
