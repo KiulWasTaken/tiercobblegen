@@ -26,6 +26,12 @@ permissions:
     default: op
   tiercobblegen.gen5:
     default: op
+  tiercobblegen.gen6:
+    default: op
+  tiercobblegen.gen7:
+    default: op
+  tiercobblegen.gen8:
+    default: op
   tiercobblegen.nethergen1:
     default: op
   tiercobblegen.nethergen2:
