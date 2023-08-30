@@ -31,11 +31,21 @@ public class InnerConfig {
 
     public static String soldAllItem = ColoredText.t("&7[&#f07e75»&7] &#b33737" + "Items sold &8» &7");
 
-    public static String cantSellItem = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You have no items to sell!");
+    public static String sellFailItem = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You have no items to sell!");
+
+    public static String cantSellItem = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot sell this item!");
 
     public static String cantBuyItem = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot purchase this item!");
 
     public static String insufficientFunds = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot afford this many items!");
+
+    public static String affectedPlayerBalanceUpdated = ColoredText.t("&7[&#f07e75»&7] &#87bd75" + "Your balance has been updated! ");
+
+    public static String operaterEcoCommandUsed = ColoredText.t("&7[&#f07e75»&7] &#87bd75" + "Updated balance of ");
+
+    public static String genericCommandFailure = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You're doing something wrong.. (nag pat if confused)");
+
+    public static String playerOffline = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "Player doesn't exist or has not joined before");
 
     public static String dontOwnGenerator = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You haven't unlocked this generator yet!");
 

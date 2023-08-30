@@ -16,6 +16,9 @@ commands:
   chestsellall:
     aliases:
       - sellall
+  eco:
+    permission: tiercobblegen.eco
+  baltop:
 
 permissions:
   tiercobblegen.gen0:
@@ -41,8 +44,6 @@ permissions:
   tiercobblegen.nethergen2:
     default: false
   tiercobblegen.nethergen3:
-    default: false
-  tiercobblegen.nethergen4:
     default: false
 
 

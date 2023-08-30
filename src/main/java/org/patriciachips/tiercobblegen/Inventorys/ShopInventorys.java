@@ -73,7 +73,7 @@ public class ShopInventorys {
 
         int i = 20;
 
-        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
+        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p.getUniqueId()) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
 
         for (ShopGUIItems item : ShopGUIItems.values()) {
             if (item.getItemInventory().equalsIgnoreCase("main")) {
@@ -82,7 +82,10 @@ public class ShopInventorys {
                 inventory.setItem(i, ItemStackMethod.createItemStack(item.getDisplayName(), item.getMaterial(), 1, Arrays.asList(item.getlore()), true, false));
                 i++;
                 if (i == 25) {
-                    i = i + 6;
+                    i = i + 5;
+                }
+                if (i == 31) {
+                    i++;
                 }
             }
         }
@@ -132,7 +135,7 @@ public class ShopInventorys {
         backItem.setItemMeta(skullMeta);
         inventory.setItem(0, backItem);
 
-        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
+        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p.getUniqueId()) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
 
         int i = 10;
 
@@ -193,7 +196,7 @@ public class ShopInventorys {
         backItem.setItemMeta(skullMeta);
         inventory.setItem(0, backItem);
 
-        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
+        inventory.setItem(4, ItemStackMethod.createItemStack(InnerConfig.balanceItemName + Bal.getPlayerBalance(p.getUniqueId()) + "$", Material.GOLD_INGOT, 1, List.of(new String[]{""}), true, false));
 
         List<Material> itemMaterial = new ArrayList<>();
         itemMaterial.add(itemToBuy);

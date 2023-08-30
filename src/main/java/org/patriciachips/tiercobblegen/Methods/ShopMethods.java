@@ -32,7 +32,7 @@ public class ShopMethods {
             DecimalFormat decimalFormat = new DecimalFormat("0.00");
             p.sendMessage(ColoredText.t(InnerConfig.soldAllItem + itemAmount + "x " + itemMaterialToSell + " &7[&#8bd169" + decimalFormat.format(balMade) + "$&7]"));
         } else {
-            p.sendMessage(InnerConfig.cantSellItem);
+            p.sendMessage(InnerConfig.sellFailItem);
             p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 0.1f, 0.5f);
         }
 

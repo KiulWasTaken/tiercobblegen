@@ -27,6 +27,7 @@ public class CobbleGens {
         gen1.put(Material.GRANITE, 1.0);
         gen1.put(Material.ANDESITE, 1.0);
         gen1.put(Material.DEEPSLATE, 1.0);
+        gen1.put(Material.COPPER_ORE, 1.0);
     }
     public static LinkedHashMap<Material, Double> gen2 = new LinkedHashMap<>();
     static {
@@ -34,6 +35,7 @@ public class CobbleGens {
         gen2.put(Material.GRANITE, 1.0);
         gen2.put(Material.ANDESITE, 1.0);
         gen2.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 1.0);
         gen2.put(Material.COAL_ORE, 10.0);
     }
     public static LinkedHashMap<Material, Double> gen3 = new LinkedHashMap<>();
@@ -42,6 +44,7 @@ public class CobbleGens {
         gen3.put(Material.GRANITE, 1.0);
         gen3.put(Material.ANDESITE, 1.0);
         gen3.put(Material.DEEPSLATE, 1.0);
+        gen3.put(Material.COPPER_ORE, 1.0);
         gen3.put(Material.COAL_ORE, 8.0);
         gen3.put(Material.IRON_ORE, 4.0);
     }
@@ -51,6 +54,7 @@ public class CobbleGens {
         gen4.put(Material.GRANITE, 1.0);
         gen4.put(Material.ANDESITE, 1.0);
         gen4.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 2.0);
         gen4.put(Material.COAL_ORE, 7.0);
         gen4.put(Material.IRON_ORE, 4.0);
         gen4.put(Material.GOLD_ORE, 3.0);
@@ -61,6 +65,7 @@ public class CobbleGens {
         gen5.put(Material.GRANITE, 1.0);
         gen5.put(Material.ANDESITE, 1.0);
         gen5.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 3.0);
         gen5.put(Material.COAL_ORE, 5.0);
         gen5.put(Material.IRON_ORE, 4.0);
         gen5.put(Material.GOLD_ORE, 3.0);
@@ -73,6 +78,7 @@ public class CobbleGens {
         gen6.put(Material.GRANITE, 1.0);
         gen6.put(Material.ANDESITE, 1.0);
         gen6.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 3.0);
         gen6.put(Material.COAL_ORE, 5.0);
         gen6.put(Material.IRON_ORE, 4.0);
         gen6.put(Material.GOLD_ORE, 4.0);
@@ -86,6 +92,7 @@ public class CobbleGens {
         gen7.put(Material.GRANITE, 1.0);
         gen7.put(Material.ANDESITE, 1.0);
         gen7.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 4.0);
         gen7.put(Material.COAL_ORE, 5.0);
         gen7.put(Material.IRON_ORE, 5.0);
         gen7.put(Material.GOLD_ORE, 5.0);
@@ -100,6 +107,7 @@ public class CobbleGens {
         gen8.put(Material.GRANITE, 1.0);
         gen8.put(Material.ANDESITE, 1.0);
         gen8.put(Material.DEEPSLATE, 1.0);
+        gen2.put(Material.COPPER_ORE, 4.0);
         gen8.put(Material.COAL_ORE, 5.0);
         gen8.put(Material.IRON_ORE, 5.0);
         gen8.put(Material.GOLD_ORE, 5.0);
@@ -113,12 +121,14 @@ public class CobbleGens {
     public static LinkedHashMap<Material, Double> nethergen1 = new LinkedHashMap<>();
     static {
         nethergen1.put(Material.NETHERRACK,10.0);
+        nethergen1.put(Material.QUARTZ, 2.0);
         nethergen1.put(Material.NETHER_GOLD_ORE,5.0);
         nethergen1.put(Material.MAGMA_BLOCK,5.0);
     }
     public static LinkedHashMap<Material, Double> nethergen2 = new LinkedHashMap<>();
     static {
         nethergen2.put(Material.NETHERRACK,10.0);
+        nethergen2.put(Material.QUARTZ, 3.0);
         nethergen2.put(Material.NETHER_GOLD_ORE,5.0);
         nethergen2.put(Material.MAGMA_BLOCK,5.0);
         nethergen2.put(Material.BLACKSTONE,5.0);
@@ -128,6 +138,7 @@ public class CobbleGens {
     public static LinkedHashMap<Material, Double> nethergen3 = new LinkedHashMap<>();
     static {
         nethergen3.put(Material.NETHERRACK,8.0);
+        nethergen3.put(Material.QUARTZ, 4.0);
         nethergen3.put(Material.NETHER_GOLD_ORE,5.0);
         nethergen3.put(Material.MAGMA_BLOCK,5.0);
         nethergen3.put(Material.BLACKSTONE,5.0);
@@ -140,6 +151,7 @@ public class CobbleGens {
     public static LinkedHashMap<Material, Double> nethergen4 = new LinkedHashMap<>();
     static {
         nethergen4.put(Material.NETHERRACK,8.0);
+        nethergen4.put(Material.QUARTZ, 5.0);
         nethergen4.put(Material.NETHER_GOLD_ORE,5.0);
         nethergen4.put(Material.MAGMA_BLOCK,5.0);
         nethergen4.put(Material.BLACKSTONE,5.0);
