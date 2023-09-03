@@ -24,7 +24,7 @@ public class ChestSellAll implements CommandExecutor {
                 Chest chest = (Chest) block.getState();
                 for (ItemStack itemStack : chest.getBlockInventory().getContents()) {
                     for (ShopGUIItems items : ShopGUIItems.values()) {
-                        if (itemStack != null && itemStack.getType() == items.getMaterial()) {
+                        if (itemStack != null && itemStack.getType() == items.getMaterial() && !items.name().contains("catagory")) {
                             ShopMethods.sellAllItem(p, items.getSellPrice(), items.getMaterial(), chest.getInventory());
                             break;
                         }

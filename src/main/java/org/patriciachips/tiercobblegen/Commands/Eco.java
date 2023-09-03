@@ -77,7 +77,9 @@ public class Eco implements TabExecutor {
         }
 
         if (affectedPlayer != op) {
-            op.sendMessage(ColoredText.t(InnerConfig.operaterEcoCommandUsed + Bukkit.getOfflinePlayer(p).getName() + " &7[&#8bd169" + PlayerDataConfig.get().getDouble(p + ".bal") + "$&7]"));
+            if (op != null) {
+                op.sendMessage(ColoredText.t(InnerConfig.operaterEcoCommandUsed + Bukkit.getOfflinePlayer(p).getName() + " &7[&#8bd169" + PlayerDataConfig.get().getDouble(p + ".bal") + "$&7]"));
+            }
         }
 
     }

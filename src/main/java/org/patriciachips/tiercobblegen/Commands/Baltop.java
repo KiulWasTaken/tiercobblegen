@@ -50,7 +50,7 @@ public class Baltop implements CommandExecutor {
                 int i = (page - 1) * playersPerPage;
 
                 try {
-                    String keya = keys.get(i);
+                    keys.get(i);
                     if (page > 0 && sortedBalance.size() > 0 && sortedBalance.size() <= (sortedBalance.size() - 1 / playersPerPage) * playersPerPage) {
                         p.sendMessage(ColoredText.t("&#39f782Balance leaderboard &6- &#578063page &c" + page + "&#578063 of &c" + (sortedBalance.size() / playersPerPage + 1)));
                         for (i = (page - 1) * playersPerPage; i >= page - 1 * 5 && i <= page * 5; i++) {
