@@ -22,7 +22,7 @@ public class ChestSellAll implements CommandExecutor {
 
             if (block != null && block.getType() == Material.CHEST) {
                 Chest chest = (Chest) block.getState();
-                for (ItemStack itemStack : chest.getBlockInventory().getContents()) {
+                for (ItemStack itemStack : chest.getInventory().getContents()) {
                     for (ShopGUIItems items : ShopGUIItems.values()) {
                         if (itemStack != null && itemStack.getType() == items.getMaterial() && !items.name().contains("catagory")) {
                             ShopMethods.sellAllItem(p, items.getSellPrice(), items.getMaterial(), chest.getInventory());

@@ -13,7 +13,7 @@ public class Join implements Listener {
 
         Player p = e.getPlayer();
 
-        PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".bal", 0.0);
+        PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".bal", 100.0);
         PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".activenormalgen", "gen1");
         PlayerDataConfig.get().addDefault(p.getUniqueId().toString() + ".activenethergen", "null");
 

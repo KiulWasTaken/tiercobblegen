@@ -29,6 +29,12 @@ public class InnerConfig {
 
     public static String currentBalance = ColoredText.t("&7[&#f07e75»&7] &#87bd75" + "Current balance &8» &7");
 
+    public static String payPlayer = ColoredText.t("&7[&#f07e75»&7] &#87bd75" + "Successfully payed ");
+
+    public static String payedByPlayer = ColoredText.t("&7[&#f07e75»&7] &#87bd75" + "Youve been payed by ");
+
+    public static String needMoreBalance = ColoredText.t("&7[&#f07e75»&7] &c" + "You lack the balance to pay that much!");
+
     public static String soldAllItem = ColoredText.t("&7[&#f07e75»&7] &#b33737" + "Items sold &8» &7");
 
     public static String sellFailItem = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You have no items to sell!");
@@ -58,5 +64,23 @@ public class InnerConfig {
     public static String generatorDisabled = ColoredText.t("&dGenerator status &7» &#af1212&lD&#c61414&li&#dd1717&ls&#f41919&la&#f41919&lb&#dd1717&ll&#c61414&le&#af1212&ld");
 
     public static String generatorNotOwned = ColoredText.t("&cYou haven't unlocked this generator!");
+
+    public static String shopOutOfStock = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "This shop is out of sufficient stock!");
+
+    public static String lackInventorySpace = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You lack the inventory space!");
+
+    public static String lackOfMaterial = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You lack the materials to sell!");
+
+    public static String chestShopBuy = ColoredText.t("&7[&#f07e75»&7] &#3cb560" + "Items bought &8» &7");
+
+    public static String chestShopSell = ColoredText.t("&7[&#f07e75»&7] &#b33737" + "Items sold &8» &7");
+
+    public static String cantBuyToself = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot buy items to yourself!");
+
+    public static String cantSellToself = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "You cannot sell items to yourself!");
+
+    public static String sellerLacksFunds = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "This seller lacks the funds to buy your items!");
+
+    public static String chestShopLacksSpace = ColoredText.t("&7[&#f07e75»&7] &#c42525" + "This chest shop is already full of items!");
 
 }

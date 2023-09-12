@@ -11,6 +11,7 @@ import org.patriciachips.tiercobblegen.InnerConfig;
 import org.patriciachips.tiercobblegen.Methods.ColoredText;
 import org.patriciachips.tiercobblegen.zEnums.CobbleGUIItems;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import static java.util.Map.Entry.comparingByValue;
@@ -55,7 +56,8 @@ public class Baltop implements CommandExecutor {
                         p.sendMessage(ColoredText.t("&#39f782Balance leaderboard &6- &#578063page &c" + page + "&#578063 of &c" + (sortedBalance.size() / playersPerPage + 1)));
                         for (i = (page - 1) * playersPerPage; i >= page - 1 * 5 && i <= page * 5; i++) {
                             String key = keys.get(i);
-                            p.sendMessage(ColoredText.t("&#baad49#" + (i + 1) + "&6. &#8d959e" + Bukkit.getOfflinePlayer(UUID.fromString(key)).getName() + " &8» &#7bd488" + sortedBalance.get(key) + "$"));
+                            DecimalFormat decimalFormat = new DecimalFormat("0.00");
+                            p.sendMessage(ColoredText.t("&#baad49#" + (i + 1) + "&6. &#8d959e" + Bukkit.getOfflinePlayer(UUID.fromString(key)).getName() + " &8» &#7bd488" + decimalFormat.format(sortedBalance.get(key)) + "$"));
                             if (i == page * playersPerPage - 1 || i == sortedBalance.size() - 1) {
                                 break;
                             }

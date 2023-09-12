@@ -20,6 +20,7 @@ public class CobbleGens {
         gen0.put(Material.DIRT, 40.0);
         gen0.put(Material.GRAVEL, 15.0);
         gen0.put(Material.SAND, 30.0);
+        gen0.put(Material.MOSS_BLOCK, 0.3);
     }
     public static LinkedHashMap<Material, Double> gen1 = new LinkedHashMap<>();
     static {
@@ -120,10 +121,7 @@ public class CobbleGens {
     /** NETHER */
     public static LinkedHashMap<Material, Double> nethergen1 = new LinkedHashMap<>();
     static {
-        nethergen1.put(Material.NETHERRACK,10.0);
         nethergen1.put(Material.QUARTZ, 2.0);
-        nethergen1.put(Material.NETHER_GOLD_ORE,5.0);
-        nethergen1.put(Material.MAGMA_BLOCK,5.0);
     }
     public static LinkedHashMap<Material, Double> nethergen2 = new LinkedHashMap<>();
     static {
@@ -132,8 +130,6 @@ public class CobbleGens {
         nethergen2.put(Material.NETHER_GOLD_ORE,5.0);
         nethergen2.put(Material.MAGMA_BLOCK,5.0);
         nethergen2.put(Material.BLACKSTONE,5.0);
-        nethergen2.put(Material.GILDED_BLACKSTONE,3.0);
-        nethergen2.put(Material.GOLD_BLOCK,2.0);
     }
     public static LinkedHashMap<Material, Double> nethergen3 = new LinkedHashMap<>();
     static {
@@ -144,8 +140,6 @@ public class CobbleGens {
         nethergen3.put(Material.BLACKSTONE,5.0);
         nethergen3.put(Material.GILDED_BLACKSTONE,3.0);
         nethergen3.put(Material.GOLD_BLOCK,2.0);
-        nethergen3.put(Material.SOUL_SAND,3.0);
-        nethergen3.put(Material.SOUL_SOIL,2.0);
     }
 
     public static LinkedHashMap<Material, Double> nethergen4 = new LinkedHashMap<>();
@@ -158,7 +152,6 @@ public class CobbleGens {
         nethergen4.put(Material.GILDED_BLACKSTONE,3.0);
         nethergen4.put(Material.GOLD_BLOCK,2.0);
         nethergen4.put(Material.SOUL_SAND,3.0);
-        nethergen4.put(Material.SOUL_SOIL,2.0);
         nethergen4.put(Material.ANCIENT_DEBRIS,1.0);
     }
 
