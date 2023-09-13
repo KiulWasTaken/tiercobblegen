@@ -14,7 +14,7 @@ public class BreakOre implements Listener {
 
     @EventHandler
     public void antiAFK (BlockBreakEvent e) {
-        if (CobbleGens.gen8.containsValue(e.getBlock().getType()) || CobbleGens.nethergen4.containsValue(e.getBlock().getType())) {
+        if (CobbleGens.gen8.containsKey(e.getBlock().getType()) || CobbleGens.nethergen4.containsKey(e.getBlock().getType())) {
             Random random = new Random();
             if (random.nextDouble() < 0.01) {
                 e.getPlayer().getWorld().spawnEntity(e.getPlayer().getLocation(), EntityType.SILVERFISH);
