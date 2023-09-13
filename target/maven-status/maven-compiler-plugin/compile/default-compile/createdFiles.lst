@@ -1,3 +1,4 @@
+org\patriciachips\tiercobblegen\Events\SignInteract.class
 org\patriciachips\tiercobblegen\Events\VillagerTrade.class
 org\patriciachips\tiercobblegen\zEnums\ShopGUIItems.class
 org\patriciachips\tiercobblegen\Methods\ShopMethods.class
@@ -8,6 +9,7 @@ org\patriciachips\tiercobblegen\Commands\Bal.class
 org\patriciachips\tiercobblegen\Inventorys\CobbleGenInventory.class
 org\patriciachips\tiercobblegen\Commands\Baltop.class
 org\patriciachips\tiercobblegen\Events\InventoryClick.class
+org\patriciachips\tiercobblegen\Commands\Pay.class
 org\patriciachips\tiercobblegen\Inventorys\ShopInventorys.class
 org\patriciachips\tiercobblegen\GlintEnchantment.class
 org\patriciachips\tiercobblegen\Methods\ItemStackMethod.class
@@ -21,4 +23,5 @@ org\patriciachips\tiercobblegen\Methods\ColoredText.class
 org\patriciachips\tiercobblegen\CobbleGens.class
 org\patriciachips\tiercobblegen\Commands\Shop.class
 org\patriciachips\tiercobblegen\Commands\Gen.class
+org\patriciachips\tiercobblegen\Events\BreakOre.class
 org\patriciachips\tiercobblegen\Events\BlockForm.class

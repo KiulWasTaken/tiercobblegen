@@ -193,6 +193,8 @@ public class InventoryClick implements Listener {
 
                     }
 
+                } else if (ChatColor.stripColor(e.getView().getTitle()).equalsIgnoreCase(ChatColor.stripColor("Shop Inventory"))) {
+                    e.setCancelled(true);
                 }
             }
         }

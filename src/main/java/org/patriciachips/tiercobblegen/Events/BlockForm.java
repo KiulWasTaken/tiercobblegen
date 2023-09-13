@@ -70,11 +70,28 @@ public class BlockForm implements Listener {
     }
 
     public Player getGenUser(Location loc) {
-        for (Entity nearbyentities : loc.getWorld().getNearbyEntities(loc, 10, 10, 10)) {
-            if (nearbyentities instanceof Player) {
+        HashMap<Player, Double> closestPlayer = new HashMap<>();
 
-                return (Player) nearbyentities;
+        for (Entity nearbyentities : loc.getWorld().getNearbyEntities(loc, 10, 10, 10)) {
+            if (nearbyentities instanceof Player p) {
+
+                if (closestPlayer.size() != 0) {
+                    List<Player> keys = new ArrayList<>(closestPlayer.keySet());
+                    if (closestPlayer.get(keys.get(0)) > loc.distance(p.getLocation())) {
+                        closestPlayer.clear();
+                        closestPlayer.put(p, loc.distance(p.getLocation()));
+                    }
+                } else {
+                    closestPlayer.put(p, loc.distance(p.getLocation()));
+                }
             }
+        }
+        if (closestPlayer.size() > 0) {
+            for (Player player : closestPlayer.keySet()) {
+                return player;
+            }
+        } else {
+            return null;
         }
         return null;
     }
