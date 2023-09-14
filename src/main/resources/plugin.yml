@@ -19,6 +19,7 @@ commands:
   eco:
     permission: tiercobblegen.eco
   baltop:
+  pay:
 
 permissions:
   tiercobblegen.gen0:
@@ -26,25 +27,26 @@ permissions:
   tiercobblegen.gen1:
     default: true
   tiercobblegen.gen2:
-    default: false
+    default: not op
   tiercobblegen.gen3:
-    default: false
+    default: not op
   tiercobblegen.gen4:
-    default: false
+    default: not op
   tiercobblegen.gen5:
-    default: false
+    default: not op
   tiercobblegen.gen6:
-    default: false
+    default: not op
   tiercobblegen.gen7:
-    default: false
+    default: not op
   tiercobblegen.gen8:
-    default: false
+    default: not op
   tiercobblegen.nethergen1:
-    default: false
+    default: not op
   tiercobblegen.nethergen2:
-    default: false
+    default: not op
   tiercobblegen.nethergen3:
-    default: false
-
+    default: not op
+  tiercobblegen.nethergen4:
+    default: not op
 
 

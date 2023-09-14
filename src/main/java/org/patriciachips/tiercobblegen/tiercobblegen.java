@@ -5,10 +5,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.patriciachips.tiercobblegen.Commands.*;
 import org.patriciachips.tiercobblegen.CustomConfigs.PlayerDataConfig;
-import org.patriciachips.tiercobblegen.Events.InventoryClick;
-import org.patriciachips.tiercobblegen.Events.BlockForm;
-import org.patriciachips.tiercobblegen.Events.Join;
-import org.patriciachips.tiercobblegen.Events.VillagerTrade;
+import org.patriciachips.tiercobblegen.Events.*;
 
 import java.lang.reflect.Field;
 
@@ -24,12 +21,15 @@ public final class tiercobblegen extends JavaPlugin {
         getCommand("chestsellall").setExecutor(new ChestSellAll());
         getCommand("eco").setExecutor(new Eco());
         getCommand("baltop").setExecutor(new Baltop());
+        getCommand("pay").setExecutor(new Pay());
 
         /** Events */
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new BlockForm(), this);
         getServer().getPluginManager().registerEvents(new Join(), this);
         getServer().getPluginManager().registerEvents(new VillagerTrade(), this);
+        getServer().getPluginManager().registerEvents(new SignInteract(), this);
+        getServer().getPluginManager().registerEvents(new BreakOre(), this);
 
         /** Logic */
 

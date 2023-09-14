@@ -155,7 +155,6 @@ public class SignInteract implements Listener {
                                 }
                                 break;
                             case "s":
-                                p.sendMessage("sell");
                                 if (p.getUniqueId() != seller) {
                                     if (playerItemAmount(p.getInventory(), material) >= itemAmount) {
                                         if (Bal.getPlayerBalance(seller) >= cost) {

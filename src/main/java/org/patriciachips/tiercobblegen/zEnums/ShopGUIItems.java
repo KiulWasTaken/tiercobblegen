@@ -107,6 +107,7 @@ public enum ShopGUIItems {
     misc_relic(              "", Material.MUSIC_DISC_RELIC,     new String[]{""}, 50.0, 0.0, "misc"),
     misc_ice(              "", Material.ICE,     new String[]{""}, 1.0, 0.0, "misc"),
     misc_soulsoil(              "", Material.SOUL_SOIL,     new String[]{""}, 300.0, 0.0, "misc"),
+    misc_netheriteupgrade(              "", Material.NETHERITE_UPGRADE_SMITHING_TEMPLATE,     new String[]{""}, 500.0, 0.0, "misc"),
     misc_pointeddripstone(              "", Material.POINTED_DRIPSTONE,     new String[]{""}, 300.0, 0.0, "misc");
 
     private String displayName;
